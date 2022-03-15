@@ -1,3 +1,4 @@
+// (09) 문법 - 예외 처리
 
 function doException() {
     throw new Error('오류 발생');
