@@ -102,3 +102,4 @@ const box3 = {...box, borderRedius: 10};
 //   먼저 객체를 JSON 객체(문자열)로 만든다음 다시 JSON 객체를
 //   일반 객체로 만들어주면 복사가 됩니다.
 const box4 = JSON.parse(JSON.stringify(box));
+//
