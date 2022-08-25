@@ -45,10 +45,24 @@ age.call(person);
 //     즉, 일반 함수는 함수를 선언할 때 this 에 바인딩할 객체가 정적으로 결정되는
 //     것이 아니고, 함수를 호출할 때 함수가 어떻게 호출되었는지에 따라 this 에
 //     바인딩할 객체가 동적으로 결정됩니다.
+//     그래서 생성자 함수로 사용할 수 있습니다.
+//     ex: function person() {
+//           this.name = 'abc';
+//         }
+//         const person2 = new person();
+//         console.log(person2.name); == 결과값: abc
+
+//     또한 arguments 를 사용할 수 있습니다.( arguments 는 함수가 실행될 때 암묵적으로 전달되어지는 변수입니다. )
+//     ex: function person() {
+//            console.log(arguments); == 결과값: Arguments(3) [1, 2, 3, callee: ƒ, Symbol(Symbol.iterator): ƒ]
+//         }
+//         person(1, 2, 3);
 
 //    2. 화살표 함수( 에로우 함수 )는 함수를 선언할 때 this 에 바인딩할 객체가
 //     정적으로 결정됩니다. 즉, call, apply, bind 메소드를 사용하여
 //     this 를 변경할 수 없습니다.
+//     그래서 생성자 함수로 사용할 수 없습니다.
+//     또한 arguments 도 사용이 불가능합니다.( 화살표 함수에서는 arguments 변수가 전달되지 않습니다.
 
 
 
